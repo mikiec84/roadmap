@@ -31,5 +31,5 @@ FastGettext.default_available_locales = available_locales.for(:fast_gettext)
 
 FastGettext.default_text_domain       = 'app'
 
-I18n.default_locale        = available_locales.for(:i18n).first
-FastGettext.default_locale = available_locales.for(:fast_gettext).first
+I18n.default_locale        = default_locale.gsub(/_/, '-')
+FastGettext.default_locale = default_locale.gsub(/\-/, '_')
